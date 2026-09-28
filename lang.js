@@ -39,8 +39,8 @@ function wire(){
       s.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();apply(t.toLowerCase());});
     }
   });
-  var saved='ru'; try{saved=localStorage.getItem('demo-lang')||'ru';}catch(e){}
-  if(LANGS.indexOf(saved)<0)saved='ru';
+  var saved='de'; try{saved=localStorage.getItem('demo-lang')||'de';}catch(e){}
+  if(LANGS.indexOf(saved)<0)saved='de';
   apply(saved);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wire);else wire();
