@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Инвестиционная платформа – макеты экранов</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+body{margin:0;background:#0f1115;color:#e6e8ec;font-family:'IBM Plex Sans',system-ui,sans-serif}
+main{max-width:960px;margin:0 auto;padding:64px 24px}
+h1{font-family:'Space Grotesk',system-ui,sans-serif;font-size:40px;font-weight:600;letter-spacing:-0.02em;margin:0 0 12px}
+p{color:#a7adb8;line-height:1.55;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+a.card{display:block;background:#1a1d24;border:1px solid #23262d;border-radius:16px;padding:20px;text-decoration:none;color:#e6e8ec}
+a.card:hover{border-color:#7ee0c4}
+.n{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280}
+.t{font-family:'Space Grotesk',system-ui,sans-serif;font-size:20px;font-weight:600;margin:6px 0}
+.r{font-size:14px;color:#a7adb8}
+.note{margin-top:40px;font-size:13px;color:#6b7280;line-height:1.55}
+</style>
+</head>
+<body>
+<main>
+<h1>Инвестиционная платформа недвижимости</h1>
+<p>Макеты семи ключевых экранов. Ссылки внутри экранов работают: главная → карточка проекта → вложение; кабинет → карточка; панель → форма проекта.</p>
+<div class="grid">
+<a class="card" href="01-home.html"><div class="n">01</div><div class="t">Главная</div><div class="r">Витрина проектов для гостя</div></a>
+<a class="card" href="02-project.html"><div class="n">02</div><div class="t">Карточка проекта</div><div class="r">Описание, модели, этапы, документы</div></a>
+<a class="card" href="05-invest-wizard.html"><div class="n">03</div><div class="t">Вложение</div><div class="r">Модель и сумма, договор, оплата</div></a>
+<a class="card" href="07-onboarding-kyc.html"><div class="n">04</div><div class="t">Регистрация и KYC</div><div class="r">Открытие счёта инвестора</div></a>
+<a class="card" href="03-investor-dashboard.html"><div class="n">05</div><div class="t">Кабинет инвестора</div><div class="r">Портфель, выплаты, документы</div></a>
+<a class="card" href="04-admin-overview.html"><div class="n">06</div><div class="t">Панель сотрудника</div><div class="r">Платежи, заявки, KYC, проекты</div></a>
+<a class="card" href="06-admin-project-form.html"><div class="n">07</div><div class="t">Форма проекта</div><div class="r">Создание проекта менеджером</div></a>
+</div>
+<div class="note">Макеты рассчитаны на экран шириной 1440 px – смотреть с компьютера. Данные в квадратных скобках – заглушки. Версия от 29.09.2026, демо-объект «Сосиска-Лофт».</div>
+</main>
+</body>
+</html>
