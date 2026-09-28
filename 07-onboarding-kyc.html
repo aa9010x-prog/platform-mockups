@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Регистрация и KYC</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap">
 <style>
@@ -9,15 +10,28 @@ body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0f111
 a{color:#e6e8ec}a:hover{color:#ffffff}
 input,select{font-family:'IBM Plex Sans',system-ui,sans-serif}
 </style>
+<style>
+html,body{margin:0;background:#0f1115;overflow-x:hidden}
+#stage{width:1440px;transform-origin:top left;position:relative}
+#demo-nav{position:fixed;left:12px;bottom:12px;z-index:99;display:flex;gap:6px;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:13px}
+#demo-nav a{color:#e6e8ec;background:#1a1d24;border:1px solid #3a3f4a;border-radius:999px;padding:8px 12px;text-decoration:none}
+#demo-nav a:hover{border-color:#7ee0c4}
+</style>
+<script>
+function fitStage(){var st=document.getElementById('stage');var s=Math.min(1,window.innerWidth/1440);st.style.transform='scale('+s+')';document.body.style.height=(st.offsetHeight*s)+'px';}
+window.addEventListener('resize',fitStage);window.addEventListener('load',fitStage);
+</script>
+
 </head>
 <body>
+<div id="stage">
 
 <div style="width: 1440px; height: 1500px; box-sizing: border-box; background: #0f1115; color: #e6e8ec; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column">
 
 <header style="display: flex; align-items: center; justify-content: space-between; padding: 0 96px; height: 80px; border-bottom: 1px solid #23262d">
 <a href="01-home.html" style="text-decoration: none; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 22px; font-weight: 600; letter-spacing: 0.02em">[Название платформы]</a>
 <div style="display: flex; gap: 4px; font-size: 13px; font-weight: 500; color: #6b7280"><span style="color: #e6e8ec">DE</span><span>/</span><span>EN</span><span>/</span><span>RU</span></div>
-<div style="font-size: 14px; color: #a7adb8">Уже есть аккаунт? <a href="#" style="color: #7ee0c4">Войти</a></div>
+<div style="font-size: 14px; color: #a7adb8">Уже есть аккаунт? <a href="03-investor-dashboard.html" style="color: #7ee0c4">Войти</a></div>
 </header>
 
 <section style="padding: 56px 96px 40px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; align-items: start">
@@ -85,7 +99,7 @@ input,select{font-family:'IBM Plex Sans',system-ui,sans-serif}
 <a href="#" style="text-decoration: none; font-size: 14px; color: #a7adb8">← Назад к личным данным</a>
 <div style="display: flex; gap: 10px; align-items: center">
 <a href="#" style="text-decoration: none; padding: 14px 22px; border: 1px solid #3a3f4a; border-radius: 999px; font-size: 14px; font-weight: 500">Сохранить и продолжить позже</a>
-<a href="#" style="text-decoration: none; padding: 14px 24px; background: #7ee0c4; color: #0f1115; border-radius: 999px; font-size: 15px; font-weight: 600">Отправить на проверку</a>
+<a href="03-investor-dashboard.html" style="text-decoration: none; padding: 14px 24px; background: #7ee0c4; color: #0f1115; border-radius: 999px; font-size: 15px; font-weight: 600">Отправить на проверку</a>
 </div>
 </div>
 </div>
@@ -104,6 +118,7 @@ input,select{font-family:'IBM Plex Sans',system-ui,sans-serif}
 <div style="display: flex; gap: 24px"><a href="#" style="color: #a7adb8">Impressum</a><a href="#" style="color: #a7adb8">Datenschutz</a><a href="#" style="color: #a7adb8">Поддержка</a></div>
 </footer>
 </div>
+</div><div id="demo-nav"><a href="index.html">☰ Все экраны</a><a href="01-home.html">Главная</a></div>
 
 </body>
 </html>

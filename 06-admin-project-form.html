@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Форма проекта – панель сотрудника</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Sans:wght@400;500&display=swap">
 <style>
@@ -9,13 +10,26 @@ body{margin:0;font-family:'IBM Plex Sans',system-ui,sans-serif;background:#0f111
 a{color:#e6e8ec}a:hover{color:#ffffff}
 input,select,textarea{font-family:'IBM Plex Sans',system-ui,sans-serif}
 </style>
+<style>
+html,body{margin:0;background:#0f1115;overflow-x:hidden}
+#stage{width:1440px;transform-origin:top left;position:relative}
+#demo-nav{position:fixed;left:12px;bottom:12px;z-index:99;display:flex;gap:6px;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:13px}
+#demo-nav a{color:#e6e8ec;background:#1a1d24;border:1px solid #3a3f4a;border-radius:999px;padding:8px 12px;text-decoration:none}
+#demo-nav a:hover{border-color:#7ee0c4}
+</style>
+<script>
+function fitStage(){var st=document.getElementById('stage');var s=Math.min(1,window.innerWidth/1440);st.style.transform='scale('+s+')';document.body.style.height=(st.offsetHeight*s)+'px';}
+window.addEventListener('resize',fitStage);window.addEventListener('load',fitStage);
+</script>
+
 </head>
 <body>
+<div id="stage">
 
 <div style="width: 1440px; height: 2200px; box-sizing: border-box; background: #0f1115; color: #e6e8ec; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: grid; grid-template-columns: 260px minmax(0, 1fr)">
 
 <aside style="background: #0b0d10; border-right: 1px solid #23262d; padding: 24px 20px; display: flex; flex-direction: column; gap: 32px">
-<div style="font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; font-weight: 600; padding: 0 12px">[Название платформы]<div style="font-size: 12px; font-weight: 500; color: #6b7280; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px">Панель управления</div></div>
+<a href="01-home.html" style="text-decoration: none; color: inherit; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 18px; font-weight: 600; padding: 0 12px">[Название платформы]<div style="font-size: 12px; font-weight: 500; color: #6b7280; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px">Панель управления</div></a>
 <nav style="display: flex; flex-direction: column; gap: 4px; font-size: 15px; font-weight: 500">
 <a href="04-admin-overview.html" style="text-decoration: none; padding: 12px; border-radius: 10px; color: #a7adb8">Обзор</a>
 <a href="#" style="text-decoration: none; padding: 12px; border-radius: 10px; background: #1a1d24; color: #e6e8ec">Проекты</a>
@@ -38,9 +52,9 @@ input,select,textarea{font-family:'IBM Plex Sans',system-ui,sans-serif}
 <h1 style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.01em">Дом «Сосиска-Лофт»</h1>
 <div style="display: flex; gap: 10px; align-items: center">
 <span style="padding: 6px 12px; background: #23262d; border-radius: 999px; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #a7adb8">Черновик</span>
-<a href="#" style="text-decoration: none; padding: 12px 20px; border: 1px solid #3a3f4a; border-radius: 999px; font-size: 14px; font-weight: 500">Предпросмотр</a>
+<a href="02-project.html" style="text-decoration: none; padding: 12px 20px; border: 1px solid #3a3f4a; border-radius: 999px; font-size: 14px; font-weight: 500">Предпросмотр</a>
 <a href="#" style="text-decoration: none; padding: 12px 20px; border: 1px solid #3a3f4a; border-radius: 999px; font-size: 14px; font-weight: 500">Сохранить черновик</a>
-<a href="#" style="text-decoration: none; padding: 12px 20px; background: #7ee0c4; color: #0f1115; border-radius: 999px; font-size: 14px; font-weight: 600">Отправить на проверку</a>
+<a href="04-admin-overview.html" style="text-decoration: none; padding: 12px 20px; background: #7ee0c4; color: #0f1115; border-radius: 999px; font-size: 14px; font-weight: 600">Отправить на проверку</a>
 </div>
 </div>
 </div>
@@ -161,6 +175,7 @@ input,select,textarea{font-family:'IBM Plex Sans',system-ui,sans-serif}
 </div>
 </main>
 </div>
+</div><div id="demo-nav"><a href="index.html">☰ Все экраны</a><a href="01-home.html">Главная</a></div>
 
 </body>
 </html>
